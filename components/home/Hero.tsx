@@ -20,15 +20,15 @@ const Hero: React.FC<HeroProps> = ({ setView }) => {
             <img 
               src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1767814153687_HORIZONTAL_ROSA_LABIO.png?alt=media&token=70531bd3-0a32-4b30-94c2-02eb42864c92" 
               alt="Auténticas Logo" 
-              className="w-[75vw] lg:w-[42vw] h-auto object-contain -mb-4 lg:-mb-8 -ml-2"
+              className="w-[60vw] lg:w-[32vw] h-auto object-contain -mb-2 lg:-mb-4 -ml-1"
             />
-            <h1 className="font-bold text-[10vw] lg:text-[6.5vw] leading-[0.8] text-brand-black uppercase">
+            <h1 className="font-bold text-[8vw] lg:text-[5.2vw] leading-[0.9] text-brand-black uppercase">
               MUJERES +40 <br />
-              <span className="text-brand-pink italic lowercase tracking-normal font-serif">en nuestro punto.</span>
+              <span className="text-brand-pink italic lowercase tracking-normal font-serif text-[5vw] lg:text-[3.2vw]">en nuestro punto.</span>
             </h1>
           </div>
 
-          <p className="text-xl lg:text-3xl italic text-gray-700 leading-relaxed mb-10 max-w-2xl font-serif">
+          <p className="text-lg lg:text-2xl italic text-gray-700 leading-relaxed mb-10 max-w-2xl font-serif">
             Cero ganas de pasar desapercibidas. Y con una comunidad que vive en voz alta y no se deja traducir.
           </p>
           <div className="flex flex-col sm:flex-row gap-6">

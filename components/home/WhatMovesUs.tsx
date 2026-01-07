@@ -22,8 +22,12 @@ const WhatMovesUs: React.FC<WhatMovesUsProps> = ({ setView }) => {
     const longWords = ['REJUVENECEMOS', 'EVOLUCIONAMOS', 'PROBABLEMENTE'];
     const hasLongWord = longWords.some(word => text.toUpperCase().includes(word));
     
-    if (hasLongWord || text.length > 35) {
-      return 'text-[1.1rem] md:text-2xl'; // Smaller on mobile to fit long words
+    if (hasLongWord) {
+      // Extra small on mobile to avoid overflow with long words, remains large on desktop
+      return 'text-[0.85rem] leading-tight md:text-2xl'; 
+    }
+    if (text.length > 35) {
+      return 'text-[1rem] md:text-2xl';
     }
     return 'text-xl md:text-2xl';
   };

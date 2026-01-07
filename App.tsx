@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LuciaAI from './components/LuciaAI';
+import CookieBanner from './components/CookieBanner';
 
 // Views
 import HomeView from './views/HomeView';
@@ -12,6 +13,7 @@ import ManifestoView from './views/ManifestoView';
 import BlogView from './views/BlogView';
 import PodcastView from './views/PodcastView';
 import ContactView from './views/ContactView';
+import LegalView from './views/LegalView';
 
 const App: React.FC = () => {
   const [view, setView] = useState('home');
@@ -32,6 +34,8 @@ const App: React.FC = () => {
         return <PodcastView />;
       case 'contacto':
         return <ContactView />;
+      case 'legal':
+        return <LegalView />;
       default:
         return <HomeView setView={setView} />;
     }
@@ -45,8 +49,9 @@ const App: React.FC = () => {
         {renderView()}
       </main>
 
-      <Footer setView={setView} />
       <LuciaAI />
+      <CookieBanner setView={setView} />
+      <Footer setView={setView} />
     </div>
   );
 };

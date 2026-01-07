@@ -17,6 +17,17 @@ const WhatMovesUs: React.FC<WhatMovesUsProps> = ({ setView }) => {
     { text: "Vive en voz alta. No te traduzcas.", style: "solid" },
   ];
 
+  // Helper function to adjust font size based on text length or specific long words on mobile
+  const getFontSizeClass = (text: string) => {
+    const longWords = ['REJUVENECEMOS', 'EVOLUCIONAMOS', 'PROBABLEMENTE'];
+    const hasLongWord = longWords.some(word => text.toUpperCase().includes(word));
+    
+    if (hasLongWord || text.length > 35) {
+      return 'text-[1.1rem] md:text-2xl'; // Smaller on mobile to fit long words
+    }
+    return 'text-xl md:text-2xl';
+  };
+
   return (
     <section className="py-24 bg-brand-cream overflow-hidden relative">
       <div className="max-w-[1400px] mx-auto px-6">
@@ -40,7 +51,7 @@ const WhatMovesUs: React.FC<WhatMovesUsProps> = ({ setView }) => {
               
               <div className="mt-auto">
                 <span className="text-[8px] font-bold text-gray-300 mb-2 block tracking-widest uppercase">PUNTO {idx + 1}</span>
-                <p className={`text-xl md:text-2xl font-bold uppercase tracking-tighter leading-[1.1] transition-all duration-300 ${
+                <p className={`font-bold uppercase tracking-tighter leading-[1.1] transition-all duration-300 ${getFontSizeClass(phrase.text)} ${
                   phrase.style === 'outline' 
                     ? 'outline-text !text-brand-black group-hover:text-brand-black' 
                     : 'text-brand-black'
@@ -63,15 +74,22 @@ const WhatMovesUs: React.FC<WhatMovesUsProps> = ({ setView }) => {
           </button>
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <div className="flex items-center gap-2">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-1 h-1 rounded-full bg-brand-pink"></div>
-            ))}
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-gray-400 mx-2">Criterio • Humor • Escándalo</span>
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-1 h-1 rounded-full bg-brand-pink"></div>
-            ))}
+        {/* Separador inferior corregido para móvil */}
+        <div className="mt-16 flex justify-center w-full">
+          <div className="flex items-center gap-1 md:gap-4 max-w-full">
+            <div className="flex items-center gap-1 md:gap-2 shrink-0">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="w-1 h-1 rounded-full bg-brand-pink"></div>
+              ))}
+            </div>
+            <span className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase text-gray-400 mx-1 md:mx-2 whitespace-nowrap overflow-hidden">
+              Criterio • Humor • Escándalo
+            </span>
+            <div className="flex items-center gap-1 md:gap-2 shrink-0">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="w-1 h-1 rounded-full bg-brand-pink"></div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

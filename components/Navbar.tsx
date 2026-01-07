@@ -32,9 +32,9 @@ const Navbar: React.FC<NavbarProps> = ({ setView, view }) => {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-brand-black py-3 shadow-xl' : 'bg-transparent py-6'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-brand-black py-3 shadow-xl' : 'bg-transparent py-4 md:py-6'}`}>
         <div className="max-w-[1400px] mx-auto px-6 flex justify-between items-center">
-          <button onClick={() => setView('home')} className={`font-bold text-4xl tracking-tighter uppercase transition-colors ${scrolled ? 'text-white' : 'text-brand-black'}`}>
+          <button onClick={() => setView('home')} className={`font-bold text-3xl md:text-4xl tracking-tighter uppercase transition-colors ${scrolled ? 'text-white' : 'text-brand-black'}`}>
             AUTÉNTICAS<span className="text-brand-pink">.</span>
           </button>
           

@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ setView }) => {
   return (
-    <section className="relative min-h-[95vh] flex items-start lg:items-center pt-24 md:pt-40 lg:pt-28 overflow-hidden bg-brand-cream">
+    <section className="relative min-h-[95vh] flex items-start lg:items-center pt-24 md:pt-40 lg:pt-28 pb-12 lg:pb-24 overflow-hidden bg-brand-cream">
       <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
         <div className="lg:col-span-8 z-10">
           <div className="flex items-center space-x-3 mb-6 md:mb-12">
@@ -28,22 +28,22 @@ const Hero: React.FC<HeroProps> = ({ setView }) => {
             </h1>
           </div>
 
-          <p className="text-xl md:text-3xl lg:text-2xl italic text-gray-800 leading-[1.1] mb-12 md:mb-16 lg:mb-12 max-w-2xl lg:max-w-xl font-serif">
+          <p className="text-xl md:text-3xl lg:text-2xl italic text-gray-800 leading-[1.1] mb-12 md:mb-16 lg:mb-8 max-w-2xl lg:max-w-xl font-serif">
             Cero ganas de pasar desapercibidas. Y con una comunidad que vive en voz alta y no se deja traducir.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-8">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
             <a 
               href="https://www.instagram.com/autenticas.es/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-8 md:px-14 py-5 md:py-7 bg-brand-black text-white rounded-full font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-brand-pink transition-all flex items-center justify-center gap-3"
+              className="px-8 md:px-12 py-4 md:py-5 bg-brand-black text-white rounded-full font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-brand-pink transition-all flex items-center justify-center gap-3"
             >
               <span className="bg-white/10 p-2 rounded-full"><Instagram size={18} /></span> 
               SÍGUENOS EN INSTAGRAM
             </a>
             <button 
               onClick={() => setView('contacto')} 
-              className="px-8 md:px-14 py-5 md:py-7 border-2 border-brand-black text-brand-black rounded-full font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-brand-black hover:text-white transition-all"
+              className="px-8 md:px-12 py-4 md:py-5 border-2 border-brand-black text-brand-black rounded-full font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-brand-black hover:text-white transition-all"
             >
               SÚMATE A LA COMUNIDAD
             </button>

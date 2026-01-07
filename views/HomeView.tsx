@@ -15,6 +15,7 @@ const HomeView: React.FC<HomeViewProps> = ({ setView }) => {
   return (
     <>
       <Hero setView={setView} />
+      <Marquee />
       <About setView={setView} />
       <WhatHappens setView={setView} />
       <Channels setView={setView} />

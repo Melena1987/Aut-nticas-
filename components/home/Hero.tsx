@@ -16,19 +16,19 @@ const Hero: React.FC<HeroProps> = ({ setView }) => {
             <span className="text-[10px] md:text-sm font-bold tracking-[0.5em] uppercase">MÁS QUE UNA EDAD</span>
           </div>
           
-          <div className="flex flex-col items-start mb-10 md:mb-16">
+          <div className="flex flex-col items-start mb-8 md:mb-12 lg:mb-8">
             <img 
               src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1767814153687_HORIZONTAL_ROSA_LABIO.png?alt=media&token=70531bd3-0a32-4b30-94c2-02eb42864c92" 
               alt="Auténticas Logo" 
               className="w-[90vw] md:w-[75vw] lg:w-[48vw] h-auto object-contain mb-4 md:mb-6 -ml-2 md:-ml-4 scale-105 origin-left"
             />
-            <h1 className="font-bold text-[13vw] md:text-[11vw] lg:text-[6.5vw] leading-[0.9] text-brand-black uppercase">
+            <h1 className="font-bold text-[13vw] md:text-[11vw] lg:text-[6.5vw] leading-[0.9] lg:leading-[0.82] text-brand-black uppercase">
               MUJERES +40 <br />
               <span className="text-brand-pink italic lowercase tracking-tight font-serif text-[8.5vw] md:text-[7vw] lg:text-[4vw] ml-1">en nuestro punto.</span>
             </h1>
           </div>
 
-          <p className="text-xl md:text-3xl lg:text-2xl italic text-gray-800 leading-tight mb-12 md:mb-20 max-w-2xl lg:max-w-xl font-serif">
+          <p className="text-xl md:text-3xl lg:text-2xl italic text-gray-800 leading-[1.1] mb-12 md:mb-16 lg:mb-12 max-w-2xl lg:max-w-xl font-serif">
             Cero ganas de pasar desapercibidas. Y con una comunidad que vive en voz alta y no se deja traducir.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-8">

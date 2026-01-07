@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ setView }) => {
               alt="Auténticas Logo" 
               className="w-[75vw] lg:w-[42vw] h-auto object-contain -mb-4 lg:-mb-8 -ml-2"
             />
-            <h1 className="font-bold text-[13vw] lg:text-[8vw] leading-[0.8] text-brand-black uppercase">
+            <h1 className="font-bold text-[10vw] lg:text-[6.5vw] leading-[0.8] text-brand-black uppercase">
               MUJERES +40 <br />
               <span className="text-brand-pink italic lowercase tracking-normal font-serif">en nuestro punto.</span>
             </h1>

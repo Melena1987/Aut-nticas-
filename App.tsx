@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import LuciaAI from './components/LuciaAI';
 import CookieBanner from './components/CookieBanner';
 
 // Views
@@ -49,7 +48,6 @@ const App: React.FC = () => {
         {renderView()}
       </main>
 
-      <LuciaAI />
       <CookieBanner setView={setView} />
       <Footer setView={setView} />
     </div>
